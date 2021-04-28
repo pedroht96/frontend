@@ -1,1 +1,20 @@
-<p>cliente-list-item works!</p>
+<div class="cliente-description">
+    <div [innerHTML]="cliente.nome" class="cliente-item-nome">
+    </div>
+    <div [innerHTML]="cliente.cpf" class="cliente-item-cpf">
+    </div>
+    <div [innerHTML]="cliente.dataNascimento" class="cliente-item-dtNascimento">
+    </div>
+    <div [innerHTML]="cliente.endereco" class="cliente-item-endereco">
+    </div>
+</div>
+<div>
+    <button type="button" [routerLink]="['/edit',cliente.id]" class="btn btn-primary mr-1">
+Alterar
+</button>
+</div>
+<div>
+    <button type="button" class="btn btn-danger">
+Excluir
+</button>
+</div>

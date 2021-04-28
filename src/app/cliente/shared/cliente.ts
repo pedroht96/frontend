@@ -1,7 +1,7 @@
 export class Cliente {
-  id: number;
-  nome: string;
-  cpf: string;
-  dataNascimento: string;
-  endereco: string;
+  id!: number;
+  nome!: string;
+  cpf!: string;
+  dataNascimento!: string;
+  endereco!: string;
 }

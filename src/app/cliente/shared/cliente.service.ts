@@ -5,22 +5,25 @@ import { Cliente } from './cliente';
   providedIn: 'root'
 })
 export class ClienteService {
-  cliente: Cliente[]=[
+  cliente: Cliente[] = [
 
-    { id: '1',
-      nome: heberth,
-      cpf: 12345678963,
-      dataNascimento: 08/07/1993,
-      endereco: rua da abobrinha },
+    { id: 1,
+      nome: 'heberth',
+      cpf: '12345678963',
+      dataNascimento: '08/07/1993',
+      endereco: 'rua da abobrinha' },
 
       {  id: 2,
-        nome: heberth2,
-        cpf: 12345678963,
-        dataNascimento: 08/07/1997,
-        endereco: rua da abobrinha2 },
+        nome: 'heberth2',
+        cpf: '12345678963',
+        dataNascimento: '08/07/1997',
+        endereco: 'rua da abobrinha2' },
   ];
 
   constructor() { }
-  getAll()
-   { return this.cliente}
+
+  // tslint:disable-next-line: typedef
+  getAll() {
+   return this.cliente;
+  }
 }
