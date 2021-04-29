@@ -1,0 +1,24 @@
+.cliente-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.list-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr;
+}
+
+.list-group:not(:first-child) {
+    grid-template-columns: auto;
+}
+
+.list-group:not(:first-child) .list-group-item {
+    grid-template-columns: auto;
+}
+
+.flex-right {
+    width: 10%;
+    text-align: center;
+}

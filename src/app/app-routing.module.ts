@@ -4,9 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { ClienteFormComponent } from './cliente/cliente-form/cliente-form.component';
 
 const routes: Routes = [
-  {path:'', component: ClienteListComponent}, //lista todos os clientes
-  {path:'cliente/new', component: ClienteFormComponent}, //cadastra novo cliente
-  {path:'cliente/edit/:id', component: ClienteFormComponent} //editar um cliente
+  {path: '', component: ClienteListComponent}, //lista todos os clientes
+  {path: 'cliente/new', component: ClienteFormComponent}, //cadastra novo cliente
+  {path: 'cliente/edit/:id', component: ClienteFormComponent} //editar um cliente
 ];
 
 @NgModule({

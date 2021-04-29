@@ -1,6 +1,7 @@
-import { Cliente } from './../shared/cliente';
-import { Component, OnInit } from '@angular/core';
-import { ClienteService } from '../shared/cliente.service';
+
+import { Component, Input, OnInit } from '@angular/core';
+import { Cliente } from '../shared/cliente';
+
 
 @Component({
   selector: 'app-cliente-list-item',
@@ -8,10 +9,13 @@ import { ClienteService } from '../shared/cliente.service';
   styleUrls: ['./cliente-list-item.component.css']
 })
 export class ClienteListItemComponent implements OnInit {
- cliente: Cliente[]=[]
-  constructor(private clienteService: ClienteService) { }
+ @Input()
+  cliente!: Cliente;
+
+  constructor() { }
 
   ngOnInit(): void{
+
   }
 
 }

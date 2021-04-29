@@ -4,3 +4,22 @@
 <button type="button" class="btn btn-primary mb-2" [routerLink]="['/cliente/new']">
   Novo Cliente
 </button>
+
+<section>
+    <div *ngIf="clientes.length == 0" class="alert alert-warning" role="alert">
+        Nenhum cliente foi cadastrado ainda.
+    </div>
+
+    <div class="list-group">
+        <div class="list-group-item ">NOME</div>
+        <div class="list-group-item ">CPF</div>
+        <div class="list-group-item ">DATA NASCIMENTO</div>
+        <div class="list-group-item ">ENDEREÇO</div>
+        <div> </div>
+    </div>
+    <div class="list-group">
+        <li class="list-group-item " *ngFor="let clientelist of clientes">
+            <app-cliente-list-item [cliente]="clientelist" class="cliente-item"></app-cliente-list-item>
+        </li>
+    </div>
+</section>
