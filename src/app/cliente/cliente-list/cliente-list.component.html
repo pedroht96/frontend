@@ -10,15 +10,15 @@
         Nenhum cliente foi cadastrado ainda.
     </div>
 
-    <ol class="list-group">
-        <li class="list-group-item ">NOME</li>
-        <li class="list-group-item ">CPF</li>
-        <li class="list-group-item ">DATA NASCIMENTO</li>
-        <li class="list-group-item ">ENDEREÇO</li>
-    </ol>
-    <ol class="list-group">
+    <div class="list-group">
+        <div class="list-group-item ">NOME</div>
+        <div class="list-group-item ">CPF</div>
+        <div class="list-group-item ">DATA NASCIMENTO</div>
+        <div class="list-group-item ">ENDEREÇO</div>
+    </div>
+    <div class="list-group">
         <li class="list-group-item " *ngFor="let clientelist of clientes">
             <app-cliente-list-item [cliente]="clientelist" class="cliente-item"></app-cliente-list-item>
         </li>
-    </ol>
+    </div>
 </section>

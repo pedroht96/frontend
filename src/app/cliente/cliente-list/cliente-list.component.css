@@ -1,5 +1,11 @@
 .cliente-item {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     align-items: center;
+}
+
+.list-group {
+    display: flex;
+    flex-direction: column;
 }

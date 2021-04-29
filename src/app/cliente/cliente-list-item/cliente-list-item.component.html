@@ -1,4 +1,4 @@
-<div class="cliente-description">
+<div class="cliente-description flex-left">
     <div [innerHTML]="cliente.nome" class="cliente-item-nome">
     </div>
     <div [innerHTML]="cliente.cpf" class="cliente-item-cpf">
@@ -8,13 +8,15 @@
     <div [innerHTML]="cliente.endereco" class="cliente-item-endereco">
     </div>
 </div>
-<div>
-    <button type="button" [routerLink]="['/edit',cliente.id]" class="btn btn-primary mr-1">
+<div class="flex-right">
+    <div>
+        <button type="button" [routerLink]="['/edit',cliente.id]" class="btn btn-primary mr-1">
 Alterar
 </button>
-</div>
-<div>
-    <button type="button" class="btn btn-danger">
+    </div>
+    <div>
+        <button type="button" class="btn btn-danger">
 Excluir
 </button>
+    </div>
 </div>

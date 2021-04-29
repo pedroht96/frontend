@@ -26,4 +26,31 @@ export class ClienteService {
   getAll() {
    return this.cliente;
   }
+
+  // tslint:disable-next-line: typedef
+  getById(id: number){
+    const cliente = this.cliente.find((value) => value.id == id);
+    return cliente;
+  }
+
+  save(cliente: Cliente){
+    if(cliente.id){
+      const clienteArr = this.getById(cliente.id) || cliente; // ||cliente adicionado por erro, verificar impacto
+      clienteArr.cpf = cliente.cpf ;
+      clienteArr.dataNascimento = cliente.dataNascimento ;
+      clienteArr.endereco = cliente.endereco;
+      clienteArr.nome = cliente.nome;
+    }
+else{
+  const lastId = this.cliente[this.cliente.length-1].id;
+  cliente.id = lastId + 1;
+  this.cliente.push(cliente);
+}
+  }
+delete(id:number){
+  const clienteIndex = this.cliente.findIndex((value) => value.id == id);
+  this.cliente.splice(clienteIndex, 1)
+}
+
+
 }
