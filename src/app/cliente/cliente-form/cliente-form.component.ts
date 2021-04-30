@@ -11,7 +11,7 @@ import { ClienteService } from '../shared/cliente.service';
 export class ClienteFormComponent implements OnInit {
 
   cliente: Cliente = new Cliente();
-  title: string = 'Novo Cliente';
+  title = 'Novo Cliente';
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -23,14 +23,22 @@ export class ClienteFormComponent implements OnInit {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
     if (id){
 
-      this.cliente = this.clienteService.getById(parseInt(id)) || this.cliente ; // this.cliente incluido por erro, verificar impacto futuro.
-      this.title = 'Alterando tarefa';
+      this.clienteService.getById(id).subscribe(cliente => {
+        this.cliente = cliente;
+        this.title = 'Alterando tarefa';
+      }) ;
+
     }
   }
 
+  // tslint:disable-next-line: typedef
   onSubmit(){
-    this.clienteService.save(this.cliente);
-    this.router.navigate(['']);
+    // tslint:disable-next-line: deprecation
+    this.clienteService.save(this.cliente).subscribe(cliente => {
+      console.log(cliente);
+      this.router.navigate(['/cliente']);
+    });
+
   }
 
 }

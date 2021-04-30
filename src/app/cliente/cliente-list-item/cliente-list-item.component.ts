@@ -1,5 +1,5 @@
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Cliente } from '../shared/cliente';
 import { ClienteService } from '../shared/cliente.service';
 
@@ -13,6 +13,9 @@ export class ClienteListItemComponent implements OnInit {
  @Input()
   cliente!: Cliente;
 
+@Output()
+  onDeleteCliente = new EventEmitter();
+
   constructor(private clienteService: ClienteService) { }
 
   ngOnInit(): void{
@@ -20,7 +23,9 @@ export class ClienteListItemComponent implements OnInit {
   }
 
   remove(cliente: Cliente){
-    this.clienteService.delete(cliente.id);
+    this.clienteService.delete(cliente._id).subscribe(()=> {
+      this.onDeleteCliente.emit(cliente);
+    });
   }
 
 }

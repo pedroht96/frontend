@@ -12,7 +12,17 @@ export class ClienteListComponent implements OnInit {
   constructor(private clienteService: ClienteService) { }
 
   ngOnInit(): void {
-    this.clientes = this.clienteService.getAll();
+    this.clienteService.getAll().subscribe(cliente =>{
+      this.clientes = cliente;
+    });
+  }
+
+  onClienteDelete(cliente: Cliente){
+    if(cliente){
+        const index = this.clientes.findIndex((clienteItem) => clienteItem._id == cliente._id);
+        this.clientes.splice(index,1);
+    }
+
   }
 
 }
