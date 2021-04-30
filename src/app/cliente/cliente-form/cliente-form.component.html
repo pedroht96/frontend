@@ -5,13 +5,26 @@
     <form (ngSubmit)="onSubmit()" #clienteForm="ngForm">
         <div class="form-group">
             <label>
-        Nome
-      </label>
-            <textarea [(ngModel)]="cliente.nome" name="cliente_nome" class="form-control">
-      </textarea>
+              Nome
+            </label>
+            <textarea [(ngModel)]="cliente.nome" name="cliente_nome" class="form-control"> </textarea>
+            <label>
+              CPF
+            </label>
+            <textarea type="number" [(ngModel)]="cliente.cpf" name="cliente_cpf" class="form-control" maxLenght="11"> </textarea>
+            <label>
+              Data Nascimento
+            </label>
+            <textarea [(ngModel)]="cliente.dataNascimento" name="cliente_dtanascimento" class="form-control" data-inputmask="'alias': 'date'"> </textarea>
+            <label>
+              Endereço
+            </label>
+            <textarea [(ngModel)]="cliente.endereco" name="cliente_endereco" class="form-control" maxLenght="50"> </textarea>
+
         </div>
-        <button type="submit" class="btn btn-primary mr-2">Salvar</button>
-        <button type="button" class="btn btn-secondary" [routerLink]="['']">Cancelar</button>
+
+        <button type="submit" class="btn btn-primary me-2 mt-2">Salvar</button>
+        <button type="button" class="btn btn-secondary mt-2" [routerLink]="['']">Cancelar</button>
 
     </form>
 </section>
