@@ -29,8 +29,8 @@ export class ClienteFormComponent implements OnInit {
   }
 
   onSubmit(){
-
-
+    this.clienteService.save(this.cliente);
+    this.router.navigate(['']);
   }
 
 }
