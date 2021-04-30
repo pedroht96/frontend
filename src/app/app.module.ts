@@ -7,13 +7,15 @@ import { ClienteListComponent } from './cliente/cliente-list/cliente-list.compon
 import { ClienteListItemComponent } from './cliente/cliente-list-item/cliente-list-item.component';
 import { ClienteFormComponent } from './cliente/cliente-form/cliente-form.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClienteListComponent,
     ClienteListItemComponent,
-    ClienteFormComponent
+    ClienteFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
