@@ -1,0 +1,25 @@
+<div class="venda-description flex-left">
+    <div [innerHTML]="venda.id_cliente" class="venda-item-idcli">
+    </div>
+    <div [innerHTML]="venda.id_funcionario" class="venda-item-idfunc">
+    </div>
+    <div [innerHTML]="venda.id_produto" class="venda-item-idprod">
+    </div>
+    <div [innerHTML]="venda.preco" class="venda-item-preco">
+    </div>
+</div>
+<div class="flex-right">
+
+    <div>
+        <button type="button" [routerLink]="['/venda/edit',venda._id!]" class="btn btn-primary mb-1">
+          Alterar
+        </button>
+
+    </div>
+
+    <div>
+        <button type="button" class="btn btn-danger" (click)="remove(venda)">
+                Excluir
+        </button>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<h2>{{title}}</h2>
+<hr />
+<section id="form">
+    <form (ngSubmit)="onSubmit()" #vendaForm="ngForm">
+        <div class="form-group">
+            <label>
+              CLIENTE
+            </label>
+            <textarea [(ngModel)]="venda.id_cliente" name="venda_cliente" class="form-control"> </textarea>
+            <label>
+              VENDEDOR
+            </label>
+            <textarea type="number" [(ngModel)]="venda.id_funcionario" name="venda_funcionario" class="form-control" maxLenght="11"> </textarea>
+            <label>
+              PRODUTO
+            </label>
+            <textarea [(ngModel)]="venda.id_produto" name="venda_produto" class="form-control" data-inputmask="'alias': 'date'"> </textarea>
+            <label>
+              PRECO
+            </label>
+            <textarea [(ngModel)]="venda.preco" name="venda_preco" class="form-control" maxLenght="50"> </textarea>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary me-2 mt-2">Salvar</button>
+        <button type="button" class="btn btn-secondary mt-2" [routerLink]="['/venda']">Cancelar</button>
+
+    </form>
+</section>

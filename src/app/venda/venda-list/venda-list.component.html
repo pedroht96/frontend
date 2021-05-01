@@ -1,0 +1,25 @@
+<h2>Vendas</h2>
+<hr />
+
+<button type="button" class="btn btn-primary mb-2" [routerLink]="['/venda/new']">
+  Nova Venda
+</button>
+<button type="button" class="btn btn-secondary position-absolute top-0 start-100 translate-middle " [routerLink]="['']">Voltar</button>
+<section>
+    <div *ngIf="vendas.length == 0" class="alert alert-warning" role="alert">
+        Nenhuma venda foi cadastrado ainda.
+    </div>
+
+    <div class="list-group">
+        <div class="list-group-item ">CLIENTE</div>
+        <div class="list-group-item ">VENDEDOR</div>
+        <div class="list-group-item ">PRODUTO</div>
+        <div class="list-group-item ">PREÇO</div>
+        <div> </div>
+    </div>
+    <div class="list-group">
+        <li class="list-group-item " *ngFor="let vendalist of vendas">
+            <app-venda-list-item [venda]="vendalist" class="venda-item" (onDeleteVenda)="onVendaDelete($event)"></app-venda-list-item>
+        </li>
+    </div>
+</section>
