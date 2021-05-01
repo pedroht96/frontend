@@ -1,16 +1,19 @@
 <h2>{{title}}</h2>
 <hr />
+
 <section id="form">
     <form (ngSubmit)="onSubmit()" #vendaForm="ngForm">
         <div class="form-group">
             <label>
               CLIENTE
-            </label>
-            <textarea [(ngModel)]="venda.id_cliente" name="venda_cliente" class="form-control"> </textarea>
+            </label> <br>
+            <select [(ngModel)]="venda.id_cliente" name="venda_idcCli" class="form-control">
+                  <option *ngFor="let cliente of cliente" [value]="cliente._id"> {{cliente.nome}}</option>
+            </select>
             <label>
               VENDEDOR
             </label>
-            <textarea type="number" [(ngModel)]="venda.id_funcionario" name="venda_funcionario" class="form-control" maxLenght="11"> </textarea>
+            <textarea type="number" name="venda_funcionario" class="form-control" maxLenght="11"> </textarea>
             <label>
               PRODUTO
             </label>
