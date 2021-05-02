@@ -13,15 +13,20 @@
             <label>
               VENDEDOR
             </label>
-            <textarea type="number" name="venda_funcionario" class="form-control" maxLenght="11"> </textarea>
+            <select [(ngModel)]="venda.id_funcionario" name="venda_idFunc" class="form-control">
+              <option *ngFor="let funcionario of funcionario" [value]="funcionario._id"> {{funcionario.nome}}</option>
+            </select>
             <label>
               PRODUTO
             </label>
-            <textarea [(ngModel)]="venda.id_produto" name="venda_produto" class="form-control" data-inputmask="'alias': 'date'"> </textarea>
-            <label>
-              PRECO
-            </label>
-            <textarea [(ngModel)]="venda.preco" name="venda_preco" class="form-control" maxLenght="50"> </textarea>
+            <select [(ngModel)]="venda.id_produto" name="venda_produto" class="form-control">
+              <option *ngFor="let produto of produto" [value]="produto._id">
+                {{produto.nome}}
+                <textarea [(ngModel)]="venda.preco" name="venda_preco" class="form-control" [value]="produto.preco">{{produto.preco}}</textarea>
+              </option>
+            </select>
+
+
 
         </div>
 
