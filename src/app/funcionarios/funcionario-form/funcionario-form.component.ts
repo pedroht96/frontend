@@ -25,7 +25,7 @@ export class FuncionarioFormComponent implements OnInit {
 
       this.funcionarioService.getById(id).subscribe(funcionario => {
         this.funcionario = funcionario;
-        this.title = 'Alterando tarefa';
+        this.title = 'Alterando Cliente';
       }) ;
 
     }

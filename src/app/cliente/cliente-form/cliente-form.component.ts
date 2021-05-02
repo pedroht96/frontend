@@ -25,7 +25,7 @@ export class ClienteFormComponent implements OnInit {
 
       this.clienteService.getById(id).subscribe(cliente => {
         this.cliente = cliente;
-        this.title = 'Alterando tarefa';
+        this.title = 'Alterando Cliente';
       }) ;
 
     }
