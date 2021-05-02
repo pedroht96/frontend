@@ -7,6 +7,8 @@ import { VendaListComponent } from './venda/venda-list/venda-list.component';
 import { VendaFormComponent } from './venda/venda-form/venda-form.component';
 import { FuncionarioFormComponent } from './funcionarios/funcionario-form/funcionario-form.component';
 import { FuncionarioListComponent } from './funcionarios/funcionario-list/funcionario-list.component';
+import { ProdutoFormComponent } from './produto/produto-form/produto-form.component';
+import { ProdutoListComponent } from './produto/produto-list/produto-list.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent}, // Home do site, todos os botoes
@@ -18,9 +20,13 @@ const routes: Routes = [
   {path: 'venda/new', component: VendaFormComponent}, // cadastra nova venda
   {path: 'venda/edit/:id', component: VendaFormComponent}, // editar uma venda
 
-  {path: 'funcionario', component: FuncionarioListComponent}, // lista todos as vendas
-  {path: 'funcionario/new', component: FuncionarioFormComponent}, // cadastra nova venda
-  {path: 'funcionario/edit/:id', component: FuncionarioFormComponent} // editar uma venda
+  {path: 'funcionario', component: FuncionarioListComponent}, // lista todos os funcionario
+  {path: 'funcionario/new', component: FuncionarioFormComponent}, // cadastra novo funcionario
+  {path: 'funcionario/edit/:id', component: FuncionarioFormComponent}, // editar um funcionario
+
+  {path: 'produto', component: ProdutoListComponent}, // lista todos os produto
+  {path: 'produto/new', component: ProdutoFormComponent}, // cadastra nova venda
+  {path: 'produto/edit/:id', component: ProdutoFormComponent}, // editar uma venda
 
 ];
 

@@ -1,0 +1,24 @@
+<h2>Produtos</h2>
+<hr />
+
+<button type="button" class="btn btn-primary mb-2" [routerLink]="['/produto/new']">
+  Novo Produto
+</button>
+<button type="button" class="btn btn-secondary position-absolute top-0 start-100 translate-middle " [routerLink]="['']">Voltar</button>
+<section>
+    <div *ngIf="produtos.length == 0" class="alert alert-warning" role="alert">
+        Nenhum produto foi cadastrado ainda.
+    </div>
+
+    <div class="list-group">
+        <div class="list-group-item ">NOME</div>
+        <div class="list-group-item ">PREÇO</div>
+        <div class="list-group-item ">QUANTIDADE</div>
+
+    </div>
+    <div class="list-group">
+        <li class="list-group-item " *ngFor="let produtolist of produtos">
+            <app-produto-list-item [produto]="produtolist" class="produto-item" (onDeleteProduto)="onProdutoDelete($event)"></app-produto-list-item>
+        </li>
+    </div>
+</section>

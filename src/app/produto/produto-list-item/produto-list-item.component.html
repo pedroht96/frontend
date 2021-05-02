@@ -1,0 +1,21 @@
+<div class="produto-description flex-left">
+    <div [innerHTML]="produto.nome" class="produto-item-nome">
+    </div>
+    <div [innerHTML]="produto.preco" class="produto-item-preco">
+    </div>
+    <div [innerHTML]="produto.quantidade" class="produto-item-quantidade">
+    </div>
+
+</div>
+<div class="flex-right">
+    <div>
+        <button type="button" [routerLink]="['/produto/edit',produto._id]" class="btn btn-primary mb-1">
+                Alterar
+        </button>
+    </div>
+    <div>
+        <button type="button" class="btn btn-danger" (click)="remove(produto)">
+                Excluir
+        </button>
+    </div>
+</div>

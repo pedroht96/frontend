@@ -16,6 +16,9 @@ import { FuncionarioListItemComponent } from './funcionarios/funcionario-list-it
 import { ClienteListComponent } from './cliente/cliente-list/cliente-list.component';
 import { FuncionarioFormComponent } from './funcionarios/funcionario-form/funcionario-form.component';
 import { FuncionarioListComponent } from './funcionarios/funcionario-list/funcionario-list.component';
+import { ProdutoFormComponent } from './produto/produto-form/produto-form.component';
+import { ProdutoListComponent } from './produto/produto-list/produto-list.component';
+import { ProdutoListItemComponent } from './produto/produto-list-item/produto-list-item.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { FuncionarioListComponent } from './funcionarios/funcionario-list/funcio
     FuncionarioFormComponent,
     FuncionarioListComponent,
     FuncionarioListItemComponent,
+    ProdutoFormComponent,
+    ProdutoListComponent,
+    ProdutoListItemComponent,
     HomeComponent
   ],
   imports: [

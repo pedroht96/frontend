@@ -1,0 +1,26 @@
+<h2>{{title}}</h2>
+<hr />
+
+<section id="form">
+    <form (ngSubmit)="onSubmit()" #produtoForm="ngForm">
+        <div class="form-group">
+            <label>
+              Nome
+            </label>
+            <textarea [(ngModel)]="produto.nome" name="produto_nome" class="form-control"> </textarea>
+            <label>
+              PRECO
+            </label>
+            <textarea type="number" [(ngModel)]="produto.preco" name="produto_preco" class="form-control" maxLenght="11"> </textarea>
+            <label>
+              QUANTIDADE
+            </label>
+            <textarea [(ngModel)]="produto.quantidade" name="produto_QTY" class="form-control"> </textarea>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary me-2 mt-2">Salvar</button>
+        <button type="button" class="btn btn-secondary mt-2" [routerLink]="['/produto']">Cancelar</button>
+
+    </form>
+</section>
