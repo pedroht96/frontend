@@ -1,0 +1,30 @@
+<h2>{{title}}</h2>
+<hr />
+
+<section id="form">
+    <form (ngSubmit)="onSubmit()" #funcionarioForm="ngForm">
+        <div class="form-group">
+            <label>
+              Nome
+            </label>
+            <textarea [(ngModel)]="funcionario.nome" name="funcionario_nome" class="form-control"> </textarea>
+            <label>
+              CPF
+            </label>
+            <textarea type="number" [(ngModel)]="funcionario.cpf" name="funcionario_cpf" class="form-control" maxLenght="11"> </textarea>
+            <label>
+              Data Nascimento
+            </label>
+            <textarea [(ngModel)]="funcionario.dataNascimento" name="funcionario_dtanascimento" class="form-control"> </textarea>
+            <label>
+              Endereço
+            </label>
+            <textarea [(ngModel)]="funcionario.endereco" name="funcionario_endereco" class="form-control" maxLenght="50"> </textarea>
+
+        </div>
+
+        <button type="submit" class="btn btn-primary me-2 mt-2">Salvar</button>
+        <button type="button" class="btn btn-secondary mt-2" [routerLink]="['/funcionario']">Cancelar</button>
+
+    </form>
+</section>

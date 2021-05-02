@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home/home.component';
 import { VendaListComponent } from './venda/venda-list/venda-list.component';
 import { VendaFormComponent } from './venda/venda-form/venda-form.component';
+import { FuncionarioFormComponent } from './funcionarios/funcionario-form/funcionario-form.component';
+import { FuncionarioListComponent } from './funcionarios/funcionario-list/funcionario-list.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent}, // Home do site, todos os botoes
@@ -14,7 +16,11 @@ const routes: Routes = [
 
   {path: 'venda', component: VendaListComponent}, // lista todos as vendas
   {path: 'venda/new', component: VendaFormComponent}, // cadastra nova venda
-  {path: 'venda/edit/:id', component: VendaFormComponent} // editar uma venda
+  {path: 'venda/edit/:id', component: VendaFormComponent}, // editar uma venda
+
+  {path: 'funcionario', component: FuncionarioListComponent}, // lista todos as vendas
+  {path: 'funcionario/new', component: FuncionarioFormComponent}, // cadastra nova venda
+  {path: 'funcionario/edit/:id', component: FuncionarioFormComponent} // editar uma venda
 
 ];
 

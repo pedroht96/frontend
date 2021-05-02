@@ -1,0 +1,25 @@
+<h2>Funcionarios</h2>
+<hr />
+
+<button type="button" class="btn btn-primary mb-2" [routerLink]="['/funcionario/new']">
+  Novo Funcionario
+</button>
+<button type="button" class="btn btn-secondary position-absolute top-0 start-100 translate-middle " [routerLink]="['']">Voltar</button>
+<section>
+    <div *ngIf="funcionarios.length == 0" class="alert alert-warning" role="alert">
+        Nenhum funcionario foi cadastrado ainda.
+    </div>
+
+    <div class="list-group">
+        <div class="list-group-item ">NOME</div>
+        <div class="list-group-item ">CPF</div>
+        <div class="list-group-item ">DATA NASCIMENTO</div>
+        <div class="list-group-item ">ENDEREÇO</div>
+        <div> </div>
+    </div>
+    <div class="list-group">
+        <li class="list-group-item " *ngFor="let funcionariolist of funcionarios">
+            <app-funcionario-list-item [funcionario]="funcionariolist" class="funcionario-item" (onDeleteFuncionario)="onFuncionarioDelete($event)"></app-funcionario-list-item>
+        </li>
+    </div>
+</section>

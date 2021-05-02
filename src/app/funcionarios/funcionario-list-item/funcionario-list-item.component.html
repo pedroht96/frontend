@@ -1,0 +1,22 @@
+<div class="funcionario-description flex-left">
+    <div [innerHTML]="funcionario.nome" class="funcionario-item-nome">
+    </div>
+    <div [innerHTML]="funcionario.cpf" class="funcionario-item-cpf">
+    </div>
+    <div [innerHTML]="funcionario.dataNascimento" class="funcionario-item-dtNascimento">
+    </div>
+    <div [innerHTML]="funcionario.endereco" class="funcionario-item-endereco">
+    </div>
+</div>
+<div class="flex-right">
+    <div>
+        <button type="button" [routerLink]="['/funcionario/edit',funcionario._id]" class="btn btn-primary mb-1">
+                Alterar
+        </button>
+    </div>
+    <div>
+        <button type="button" class="btn btn-danger" (click)="remove(funcionario)">
+                Excluir
+        </button>
+    </div>
+</div>
