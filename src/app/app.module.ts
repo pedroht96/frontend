@@ -19,6 +19,7 @@ import { FuncionarioListComponent } from './funcionarios/funcionario-list/funcio
 import { ProdutoFormComponent } from './produto/produto-form/produto-form.component';
 import { ProdutoListComponent } from './produto/produto-list/produto-list.component';
 import { ProdutoListItemComponent } from './produto/produto-list-item/produto-list-item.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ProdutoListItemComponent } from './produto/produto-list-item/produto-li
     ProdutoFormComponent,
     ProdutoListComponent,
     ProdutoListItemComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
