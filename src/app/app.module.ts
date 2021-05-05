@@ -21,9 +21,16 @@ import { ProdutoListComponent } from './produto/produto-list/produto-list.compon
 import { ProdutoListItemComponent } from './produto/produto-list-item/produto-list-item.component';
 import { LoginComponent } from './login/login.component';
 
+import {ButtonModule} from 'primeng/button';
+import {CardModule} from 'primeng/card';
+import {InputTextModule} from 'primeng/inputtext';
+
 @NgModule({
   declarations: [
     AppComponent,
+    ButtonModule,
+    CardModule,
+    InputTextModule,
     ClienteListComponent,
     ClienteListItemComponent,
     ClienteFormComponent,
