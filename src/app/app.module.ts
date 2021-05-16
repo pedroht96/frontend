@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { RouterModule } from '@angular/router';
+
 import { AppComponent } from './app.component';
 
 import { ClienteListItemComponent } from './cliente/cliente-list-item/cliente-list-item.component';
@@ -19,18 +19,15 @@ import { FuncionarioListComponent } from './funcionarios/funcionario-list/funcio
 import { ProdutoFormComponent } from './produto/produto-form/produto-form.component';
 import { ProdutoListComponent } from './produto/produto-list/produto-list.component';
 import { ProdutoListItemComponent } from './produto/produto-list-item/produto-list-item.component';
-import { LoginComponent } from './login/login.component';
 
-import {ButtonModule} from 'primeng/button';
-import {CardModule} from 'primeng/card';
-import {InputTextModule} from 'primeng/inputtext';
+import { CreateAccountComponent } from './account/create-account/create-account.component';
+import { AuthenticationComponent } from './layout/authentication/authentication.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonModule,
-    CardModule,
-    InputTextModule,
+
     ClienteListComponent,
     ClienteListItemComponent,
     ClienteFormComponent,
@@ -44,7 +41,9 @@ import {InputTextModule} from 'primeng/inputtext';
     ProdutoListComponent,
     ProdutoListItemComponent,
     HomeComponent,
-    LoginComponent
+
+    CreateAccountComponent,
+      AuthenticationComponent
   ],
   imports: [
     BrowserModule,
