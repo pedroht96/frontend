@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { ClienteListItemComponent } from './cliente/cliente-list-item/cliente-list-item.component';
 import { ClienteFormComponent } from './cliente/cliente-form/cliente-form.component';
@@ -50,6 +51,7 @@ import { AuthenticationComponent } from './layout/authentication/authentication.
     HttpClientModule,
     FormsModule,
     RouterModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

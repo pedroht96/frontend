@@ -10,6 +10,11 @@ import { FuncionarioListComponent } from './funcionarios/funcionario-list/funcio
 import { ProdutoFormComponent } from './produto/produto-form/produto-form.component';
 import { ProdutoListComponent } from './produto/produto-list/produto-list.component';
 
+import { AuthenticationComponent } from './layout/authentication/authentication.component';
+import { LoginComponent } from './account/login/login.component';
+import { CreateAccountComponent } from './account/create-account/create-account.component';
+import { AuthGuard } from './account/shared/auth.guard';
+
 const routes: Routes = [
 
   {path: '',
@@ -30,10 +35,27 @@ const routes: Routes = [
     {path: 'produto', component: ProdutoListComponent}, // lista todos os produto
     {path: 'produto/new', component: ProdutoFormComponent}, // cadastra nova venda
     {path: 'produto/edit/:id', component: ProdutoFormComponent}, // editar uma venda
-  ]
+  ],
+  canActivate : [AuthGuard]
 }, // Home do site, todos os botoes
-{path: ''
-con}
+{path: '',
+component : AuthenticationComponent,
+children:[
+
+  {path:'',
+  redirectTo:'login',
+  pathMatch: 'full'
+},
+
+{path:'login',
+component: LoginComponent
+},
+
+{path:'create-account',
+component: CreateAccountComponent
+}
+]
+}
 
 ];
 
