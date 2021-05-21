@@ -16,29 +16,29 @@ import { CreateAccountComponent } from './account/create-account/create-account.
 import { AuthGuard } from './account/shared/auth.guard';
 
 const routes: Routes = [
-{path: 'produto', component: ProdutoListComponent},
-  {path: '',
+
+{path: '',
   component: HomeComponent,
-  children: [
-    {path: 'cliente', component: ClienteListComponent}, // lista todos os clientes
-    {path: 'cliente/new', component: ClienteFormComponent}, // cadastra novo cliente
-    {path: 'cliente/edit/:id', component: ClienteFormComponent}, // editar um cliente
+  canActivate : [AuthGuard],
 
-    {path: 'venda', component: VendaListComponent}, // lista todos as vendas
-    {path: 'venda/new', component: VendaFormComponent}, // cadastra nova venda
-    {path: 'venda/edit/:id', component: VendaFormComponent}, // editar uma venda
-
-    {path: 'funcionario', component: FuncionarioListComponent}, // lista todos os funcionario
-    {path: 'funcionario/new', component: FuncionarioFormComponent}, // cadastra novo funcionario
-    {path: 'funcionario/edit/:id', component: FuncionarioFormComponent}, // editar um funcionario
-
-    {path: 'produto', component: ProdutoListComponent}, // lista todos os produto
-    {path: 'produto/new', component: ProdutoFormComponent}, // cadastra nova venda
-    {path: 'produto/edit/:id', component: ProdutoFormComponent}, // editar uma venda
-  ],
-  canActivate : [AuthGuard], 
-  
 }, // Home do site, todos os botoes
+
+{path: 'cliente', component: ClienteListComponent, canActivate : [AuthGuard],}, // lista todos os clientes
+{path: 'cliente/new', component: ClienteFormComponent, canActivate : [AuthGuard],}, // cadastra novo cliente
+{path: 'cliente/edit/:id', component: ClienteFormComponent, canActivate : [AuthGuard],}, // editar um cliente
+
+{path: 'venda', component: VendaListComponent, canActivate : [AuthGuard],}, // lista todos as vendas
+{path: 'venda/new', component: VendaFormComponent,canActivate : [AuthGuard],}, // cadastra nova venda
+{path: 'venda/edit/:id', component: VendaFormComponent,canActivate : [AuthGuard],}, // editar uma venda
+
+{path: 'funcionario', component: FuncionarioListComponent,canActivate : [AuthGuard],}, // lista todos os funcionario
+{path: 'funcionario/new', component: FuncionarioFormComponent, canActivate : [AuthGuard],}, // cadastra novo funcionario
+{path: 'funcionario/edit/:id', component: FuncionarioFormComponent, canActivate : [AuthGuard]}, // editar um funcionario
+
+{path: 'produto', component: ProdutoListComponent, canActivate : [AuthGuard],}, // lista todos os produto
+{path: 'produto/new', component: ProdutoFormComponent, canActivate : [AuthGuard],}, // cadastra nova venda
+{path: 'produto/edit/:id', component: ProdutoFormComponent, canActivate : [AuthGuard],}, // editar uma venda
+
 {path: '',
 component : AuthenticationComponent,
 children:[
