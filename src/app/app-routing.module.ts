@@ -16,7 +16,7 @@ import { CreateAccountComponent } from './account/create-account/create-account.
 import { AuthGuard } from './account/shared/auth.guard';
 
 const routes: Routes = [
-
+{path: 'produto', component: ProdutoListComponent},
   {path: '',
   component: HomeComponent,
   children: [
@@ -36,7 +36,8 @@ const routes: Routes = [
     {path: 'produto/new', component: ProdutoFormComponent}, // cadastra nova venda
     {path: 'produto/edit/:id', component: ProdutoFormComponent}, // editar uma venda
   ],
-  canActivate : [AuthGuard]
+  canActivate : [AuthGuard], 
+  
 }, // Home do site, todos os botoes
 {path: '',
 component : AuthenticationComponent,

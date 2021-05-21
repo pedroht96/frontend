@@ -1,4 +1,4 @@
-<div id="home_buttons" class="p-grid p-justify-center">
+<!--<div id="home_buttons" class="p-grid p-justify-center">
     <button type="button" class="btn btn-primary me-3 mb-2" [routerLink]="['/cliente']">
 Clientes
 </button>
@@ -12,3 +12,33 @@ Produtos
 Vendas
 </button>
 </div>
+<div>
+    <router-outlet></router-outlet>
+</div>-->
+<header>
+    <nav class="navbar fixed-top navbar-dark bg-primary">
+        <a class="navbar-brand" [routerLink]="['/']"> Vendas </a>
+    </nav>
+</header>
+
+<section>
+    <main class="container">
+        <div id="home_buttons" class="p-grid p-justify-center">
+            <button type="button" class="btn btn-primary me-3 mb-2" [routerLink]="['/cliente']">
+        Clientes
+      </button>
+            <button type="button" class="btn btn-primary me-3 mb-2" [routerLink]="['/funcionario']">
+        Funcionarios
+      </button>
+            <button type="button" class="btn btn-primary me-3 mb-2" [routerLink]="['/produto']">
+        Produtos
+      </button>
+            <button type="button" class="btn btn-primary me-3 mb-2" [routerLink]="['/venda']">
+        Vendas
+      </button>
+        </div>
+    </main>
+</section>
+<footer class="mt-3 p-2 text-center">
+    <a> Desenvolvido por EDUARDO SILVA, PEDRO HENRIQUE, </a>
+</footer>

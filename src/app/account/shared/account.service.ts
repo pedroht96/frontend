@@ -1,3 +1,5 @@
+import { environment } from './../../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,19 +7,18 @@ import { Injectable } from '@angular/core';
 })
 export class AccountService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  login(user:any){
+  login(user: any) {
     return new Promise((resolve) => {
-      window.localStorage.setItems('token','meu-token');
+      window.localStorage.setItem('token', 'meu-token');
       resolve(true);
     });
   }
 
-  createAccount(account:any){
-  return new Promise((resolve) => {
-  resolve(true);
-  });
-}
-
+  createAccount(account: any) {
+    return new Promise((resolve) => {
+      resolve(true);
+    });
+  }
 }

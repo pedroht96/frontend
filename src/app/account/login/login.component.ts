@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AccountService } from '../shared/account.service';
+import { AccountService } from './../shared/account.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -8,18 +8,17 @@ import { AccountService } from '../shared/account.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-login ={
-  email:'',
-  password:'',
-}
+  login = {
+    email: '',
+    password: ''
+  };
 
   constructor(
-    private accountService : AccountService,
+    private accountService: AccountService,
     private router: Router
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   async onSubmit() {
@@ -33,5 +32,4 @@ login ={
       console.error(error);
     }
   }
-
 }

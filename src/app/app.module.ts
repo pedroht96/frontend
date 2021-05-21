@@ -1,3 +1,4 @@
+import { LoginComponent } from './account/login/login.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -10,6 +11,7 @@ import { ClienteListItemComponent } from './cliente/cliente-list-item/cliente-li
 import { ClienteFormComponent } from './cliente/cliente-form/cliente-form.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './layout/home/home.component';
+
 import { VendaFormComponent } from './venda/venda-form/venda-form.component';
 import { VendaListComponent } from './venda/venda-list/venda-list.component';
 import { VendaListItemComponent } from './venda/venda-list-item/venda-list-item.component';
@@ -42,6 +44,8 @@ import { AuthenticationComponent } from './layout/authentication/authentication.
     ProdutoListComponent,
     ProdutoListItemComponent,
     HomeComponent,
+
+    LoginComponent,
 
     CreateAccountComponent,
     AuthenticationComponent
