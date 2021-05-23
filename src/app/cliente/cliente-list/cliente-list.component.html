@@ -4,7 +4,7 @@
 <button type="button" class="btn btn-primary mb-2" [routerLink]="['/cliente/new']">
   Novo Cliente
 </button>
-<button type="button" class="btn btn-secondary position-absolute top-0 start-100 translate-middle " [routerLink]="['']">Voltar</button>
+<button type="button" style="text-align: right;" class="btn btn-secondary mb-2 " [routerLink]="['']">Voltar</button>
 <section>
     <div *ngIf="clientes.length == 0" class="alert alert-warning" role="alert">
         Nenhum cliente foi cadastrado ainda.
