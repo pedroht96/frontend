@@ -60,9 +60,9 @@ export class VendaFormComponent implements OnInit {
 
   }
 
-  // tslint:disable-next-line: typedef
+
   onSubmit(){
-    // tslint:disable-next-line: deprecation
+
     this.vendaService.save(this.venda).subscribe(venda => {
       console.log(venda);
       this.router.navigate(['/venda']);

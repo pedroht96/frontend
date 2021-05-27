@@ -1,0 +1,11 @@
+input {
+    resize: none;
+    width: 50%;
+    height: 6vh;
+}
+
+textarea {
+    resize: none;
+    width: 50%;
+    height: 6vh;
+}

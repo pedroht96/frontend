@@ -7,15 +7,15 @@
             <label>
               Nome
             </label>
-            <textarea [(ngModel)]="funcionario.nome" name="funcionario_nome" class="form-control"> </textarea>
+            <input [(ngModel)]="funcionario.nome" name="funcionario_nome" class="form-control">
             <label>
               CPF
             </label>
-            <textarea type="number" [(ngModel)]="funcionario.cpf" name="funcionario_cpf" class="form-control" maxLenght="11"> </textarea>
+            <input [(ngModel)]="funcionario.cpf" name="funcionario_cpf" class="form-control" mask="CPF_CNPJ">
             <label>
               Data Nascimento
             </label>
-            <textarea [(ngModel)]="funcionario.dataNascimento" name="funcionario_dtanascimento" class="form-control"> </textarea>
+            <input [(ngModel)]="funcionario.dataNascimento" name="funcionario_dtanascimento" class="form-control" mask="d0/M0/00" [leadZeroDateTime]="true">
             <label>
               Endereço
             </label>

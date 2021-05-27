@@ -37,7 +37,7 @@ const produtoBody = {
 
   nome: produto.nome,
   preco: produto.preco,
-  dataNascimento: produto.quantidade,
+  quantidade: produto.quantidade,
 
 
 };

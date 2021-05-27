@@ -7,15 +7,15 @@
             <label>
               Nome
             </label>
-            <textarea [(ngModel)]="produto.nome" name="produto_nome" class="form-control"> </textarea>
+            <input [(ngModel)]="produto.nome" name="produto_nome" class="form-control">
             <label>
               PRECO
             </label>
-            <textarea type="number" [(ngModel)]="produto.preco" name="produto_preco" class="form-control" maxLenght="11"> </textarea>
+            <input [(ngModel)]="produto.preco" name="produto_preco" class="form-control" mask="separator.2" thousandSeparator=".">
             <label>
-              QUANTIDADE
+              QUANTIDADE ESTOQUE
             </label>
-            <textarea [(ngModel)]="produto.quantidade" name="produto_QTY" class="form-control"> </textarea>
+            <input type="number" [(ngModel)]="produto.quantidade" name="produto_QTY" class="form-control" min="1">
 
         </div>
 

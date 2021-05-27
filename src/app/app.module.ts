@@ -28,6 +28,7 @@ import { CreateAccountComponent } from './account/create-account/create-account.
 import { AuthenticationComponent } from './layout/authentication/authentication.component';
 
 import { httpInterceptorProviders } from './http-interceptors/index';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { httpInterceptorProviders } from './http-interceptors/index';
     FormsModule,
     RouterModule,
     ReactiveFormsModule,
+    NgxMaskModule.forRoot(),
     AppRoutingModule
   ],
   providers: [
