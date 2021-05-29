@@ -1,7 +1,12 @@
 <header>
     <nav class="navbar fixed-top navbar-dark bg-primary">
         <a class="navbar-brand" [routerLink]="['/']"> Vendas </a>
+        <a class="navbar-brand" href="/">
+            <button class="btn btn-primary me-3" onclick="localStorage.clear()">
+        Sair
+      </button></a>
     </nav>
+
 </header>
 
 <section style="text-align: center;">

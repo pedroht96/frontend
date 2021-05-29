@@ -26,10 +26,14 @@ export class CreateAccountComponent implements OnInit {
 
       // exibir uma msg amigavel aqui
       console.log("Conta Criada");
+      alert("Conta Criada");
+      window.location.href="/";
       console.log(result);
+
     } catch (error) {
       // exibir uma msg de erro
       console.log("Conta Com ERRO");
+      confirm("Conta Com ERRO, tente novamente");
       console.error(error);
 
     }

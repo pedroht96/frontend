@@ -11,11 +11,11 @@
             <label>
               CPF
             </label>
-            <input [(ngModel)]="funcionario.cpf" name="funcionario_cpf" class="form-control" mask="CPF_CNPJ">
+            <input [(ngModel)]="funcionario.cpf" name="funcionario_cpf" class="form-control" mask="000.000.000-00">
             <label>
               Data Nascimento
             </label>
-            <input [(ngModel)]="funcionario.dataNascimento" name="funcionario_dtanascimento" class="form-control" mask="d0/M0/00" [leadZeroDateTime]="true">
+            <input [(ngModel)]="funcionario.dataNascimento" name="funcionario_dtanascimento" class="form-control" mask="d0/M0/0000" [leadZeroDateTime]="true">
             <label>
               Endereço
             </label>
