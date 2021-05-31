@@ -4,4 +4,5 @@ export class Produto {
   nome!: string;
   preco!: number;
   quantidade!: number;
+  promocao!: boolean;
 }

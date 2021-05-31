@@ -38,6 +38,7 @@ const produtoBody = {
   nome: produto.nome,
   preco: produto.preco,
   quantidade: produto.quantidade,
+  promocao: produto.promocao,
 
 
 };

@@ -17,6 +17,12 @@
             </label>
             <input type="number" [(ngModel)]="produto.quantidade" name="produto_QTY" class="form-control" min="1">
 
+
+            <label class="control-label col-md-4">Promoção:</label>
+            <input type="radio" [(ngModel)]="produto.promocao" value="true" required> Sim<br>
+            <input type="radio" [(ngModel)]="produto.promocao" value="false" required> Não<br>
+
+
         </div>
 
         <button type="submit" class="btn btn-primary me-2 mt-2">Salvar</button>
