@@ -9,13 +9,14 @@
     <div *ngIf="vendas.length == 0" class="alert alert-warning" role="alert">
         Nenhuma venda foi cadastrado ainda.
     </div>
-
     <div class="list-group">
         <div class="list-group-item ">CLIENTE</div>
         <div class="list-group-item ">VENDEDOR</div>
         <div class="list-group-item ">PRODUTO</div>
         <div class="list-group-item ">PREÇO</div>
-        <div> </div>
+        <div class="list-group-item ">CARD_NOME</div>
+        <div class="list-group-item "> </div>
+
     </div>
     <div class="list-group">
         <li class="list-group-item " *ngFor="let vendalist of vendas">

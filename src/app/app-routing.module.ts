@@ -14,6 +14,7 @@ import { AuthenticationComponent } from './layout/authentication/authentication.
 import { LoginComponent } from './account/login/login.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { AuthGuard } from './account/shared/auth.guard';
+import { PromocaoListComponent } from './promocao/produto-list/produto-list.component';
 
 const routes: Routes = [
 
@@ -38,6 +39,9 @@ const routes: Routes = [
 {path: 'produto', component: ProdutoListComponent, canActivate : [AuthGuard],}, // lista todos os produto
 {path: 'produto/new', component: ProdutoFormComponent, canActivate : [AuthGuard],}, // cadastra nova venda
 {path: 'produto/edit/:id', component: ProdutoFormComponent, canActivate : [AuthGuard],}, // editar uma venda
+
+{path: 'promocao', component: PromocaoListComponent, canActivate : [AuthGuard],}, // lista todos os produtos em promocao
+
 
 {path: '',
 component : AuthenticationComponent,

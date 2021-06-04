@@ -19,9 +19,10 @@
 
 
             <label class="control-label col-md-4">Promoção:</label>
-            <input type="radio" [(ngModel)]="produto.promocao" value="true" required> Sim<br>
-            <input type="radio" [(ngModel)]="produto.promocao" value="false" required> Não<br>
-
+            <div class="radio">
+                <input type="radio" [(ngModel)]="produto.promocao" name="produto_promocao" value="SIM" required> <span style="position: absolute;">Sim</span><br>
+                <input type="radio" [(ngModel)]="produto.promocao" name="produto_promocao" value="NÃO" required> <span style="position: absolute;">Não</span><br>
+            </div>
 
         </div>
 

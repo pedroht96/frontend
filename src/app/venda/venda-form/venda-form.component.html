@@ -25,7 +25,29 @@
                 <textarea [(ngModel)]="venda.preco" name="venda_preco" class="form-control" [value]="produto.preco">{{produto.preco}}</textarea>
               </option>
             </select>
-
+            <label>
+              CARTÃO DE CREDITO :
+            </label>
+            <label>
+              Nome Conforme cartão
+            </label>
+            <input [(ngModel)]="venda.cardHolder" name="venda_numero_card" class="form-control">
+            <label>
+              Numero cartão
+            </label>
+            <input [(ngModel)]="venda.cardNumber" name="venda_nome_card" class="form-control" mask="0000-0000-0000-0000">
+            <label>
+              Mes validade
+            </label>
+            <input [(ngModel)]="venda.expirationMonth" name="venda_mes_exp_card" class="form-control">
+            <label>
+              Ano validade
+            </label>
+            <input [(ngModel)]="venda.expirationYear" name="venda_ano_exp_card" class="form-control">
+            <label>
+              CCV
+            </label>
+            <input [(ngModel)]="venda.ccv" name="venda_ccv_card" class="form-control">
 
 
         </div>

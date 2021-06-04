@@ -1,6 +1,8 @@
 .venda-description {
     flex-grow: 1;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.5fr;
     white-space: pre-line;
+    text-align: center;
+    font-size: 13px;
 }

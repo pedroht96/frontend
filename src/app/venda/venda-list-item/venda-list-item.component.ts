@@ -17,7 +17,7 @@ export class VendaListItemComponent implements OnInit {
 @Output()
   onDeleteVenda = new EventEmitter();
 
-  constructor(private vendaService: VendaService) { }
+constructor(private vendaService: VendaService) { }
 
   ngOnInit(): void{
 

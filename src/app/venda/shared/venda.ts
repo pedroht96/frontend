@@ -5,4 +5,9 @@ export class Venda {
   id_funcionario!: string | undefined;
   id_produto!: string;
   preco!: number | undefined;
+  cardNumber!: string;
+  cardHolder!: string;
+  expirationMonth!: string;
+  expirationYear!: string;
+  ccv!: number;
 }

@@ -10,6 +10,8 @@ import { Produto } from 'src/app/produto/shared/produto';
 import { ProdutoService} from 'src/app/produto/shared/produto.service';
 import { Funcionario } from 'src/app/funcionarios/shared/funcionario';
 import { FuncionarioService } from 'src/app/funcionarios/shared/funcionario.service';
+
+
 @Component({
   selector: 'app-venda-form',
   templateUrl: './venda-form.component.html',

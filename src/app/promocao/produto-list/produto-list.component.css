@@ -1,4 +1,4 @@
-.venda-item {
+.produto-item {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -7,7 +7,7 @@
 
 .list-group {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr;
 }
 
 .list-group:not(:first-child) {

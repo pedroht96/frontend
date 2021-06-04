@@ -1,4 +1,4 @@
-<h2>Produtos</h2>
+<h2>Promoções</h2>
 <hr />
 
 <button type="button" class="btn btn-primary mb-2" [routerLink]="['/produto/new']">
@@ -6,9 +6,7 @@
 </button>
 <button type="button" style="text-align: right;" class="btn btn-secondary mb-2 " [routerLink]="['']">Voltar</button>
 <section>
-    <div *ngIf="produtos.length == 0" class="alert alert-warning" role="alert">
-        Nenhum produto foi cadastrado ainda.
-    </div>
+
 
     <div class="list-group">
         <div class="list-group-item ">NOME</div>
@@ -17,9 +15,12 @@
         <div class="list-group-item ">PROMOÇÃO</div>
 
     </div>
-    <div class="list-group">
-        <li class="list-group-item " *ngFor="let produtolist of produtos">
-            <app-produto-list-item [produto]="produtolist" class="produto-item" (onDeleteProduto)="onProdutoDelete($event)"></app-produto-list-item>
-        </li>
+    <div class="list-group" *ngFor="let produtolist of produtos">
+        <div *ngIf="produtolist.promocao == 'SIM'">
+            <li class="list-group-item ">
+                <app-promocao-list-item [produto]="produtolist" class="produto-item"></app-promocao-list-item>
+            </li>
+        </div>
+
     </div>
 </section>

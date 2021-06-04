@@ -30,6 +30,11 @@ import { AuthenticationComponent } from './layout/authentication/authentication.
 import { httpInterceptorProviders } from './http-interceptors/index';
 import { NgxMaskModule } from 'ngx-mask';
 
+import { PromocaoListComponent } from './promocao/produto-list/produto-list.component';
+import { PromocaoListItemComponent } from './promocao/produto-list-item/produto-list-item.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,12 +51,17 @@ import { NgxMaskModule } from 'ngx-mask';
     ProdutoFormComponent,
     ProdutoListComponent,
     ProdutoListItemComponent,
+    PromocaoListComponent,
+    PromocaoListItemComponent,
     HomeComponent,
 
     LoginComponent,
 
     CreateAccountComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+
+
+
   ],
   imports: [
     BrowserModule,
@@ -60,6 +70,7 @@ import { NgxMaskModule } from 'ngx-mask';
     RouterModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
+
     AppRoutingModule
   ],
   providers: [
